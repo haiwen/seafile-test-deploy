@@ -6,7 +6,7 @@ set -x
 sudo apt-get update -qq
 sudo apt-get install -qq valac uuid-dev libevent-dev libarchive-dev intltool re2c libjansson-dev
 
-git submodule update
+git submodule update --remote --merge
 
 # build libevhtp
 cd libevhtp \
