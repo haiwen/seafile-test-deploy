@@ -10,43 +10,43 @@ sudo apt-get install -qq valac uuid-dev libevent-dev \
 git submodule update --remote --merge
 
 # build libevhtp
-cd libevhtp \
-    && cmake . \
-    && make -j8 \
-    && sudo make install \
-    && cd -
+cd libevhtp
+cmake .
+make -j8
+sudo make install
+cd -
 
 # build libzdb
-cd libzdb \
-    && ./bootstrap \
-    && ./configure --without-postgresql --without-mysql \
-    && make -j8 \
-    && sudo make install \
-    && cd -
+cd libzdb
+./bootstrap
+./configure --without-postgresql --without-mysql
+make -j8
+sudo make install
+cd -
 
 # build libsearpc
-cd libsearpc \
-    && ./autogen.sh \
-    && ./configure \
-    && make -j8 \
-    && sudo make install \
-    && cd -
+cd libsearpc
+./autogen.sh
+./configure
+make -j8
+sudo make install
+cd -
 
 # build ccnet
-cd ccnet \
-    && ./autogen.sh \
-    && ./configure --disable-client --enable-server \
-    && make -j8 \
-    && sudo make install \
-    && cd -
+cd ccnet
+./autogen.sh
+./configure --disable-client --enable-server
+make -j8
+sudo make install
+cd -
 
 # build seafile
-cd seafile \
-    && ./autogen.sh \
-    && ./configure --disable-client --disable-fuse --enable-server \
-    && make -j8 \
-    && sudo make install \
-    && cd -
+cd seafile
+./autogen.sh
+./configure --disable-client --disable-fuse --enable-server
+make -j8
+sudo make install
+cd -
 
 # install seahub deps
 sudo pip install python-dateutil chardet six Image \
