@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 sudo apt-get update -qq
 sudo apt-get install -qq valac uuid-dev libevent-dev libarchive-dev intltool re2c libjansson-dev libqt4-dev
@@ -47,7 +48,10 @@ cd seafile \
     && cd -
 
 # install seahub deps
-pip install python-dateutil chardet six Image Django==1.5.8 Djblets==0.6.14 --allow-all-external --allow-unverified Djblets --allow-unverified PIL
+pip install python-dateutil chardet six Image \
+    Django==1.5.8 Djblets==0.6.14 \
+    --allow-all-external --allow-unverified Djblets \
+    --allow-unverified PIL
 
 # install phantomjs binary for linux x86_64
 curl -L -o /tmp/phantomjs.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
