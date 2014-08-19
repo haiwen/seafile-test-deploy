@@ -1,6 +1,6 @@
 language: bash
 script:
- - ./build.sh
+ - ./bootstrap.sh
 notifications:
   email:
     recipients:
