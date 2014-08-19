@@ -34,7 +34,7 @@ cd libsearpc \
 # build ccnet
 cd ccnet \
     && ./autogen.sh \
-    && ./configure --enable-server \
+    && ./configure --disable-client --enable-server \
     && make -j8 \
     && sudo make install \
     && cd -
@@ -42,7 +42,7 @@ cd ccnet \
 # build seafile
 cd seafile \
     && ./autogen.sh \
-    && ./configure --disable-fuse --enable-server \
+    && ./configure --disable-client --disable-fuse --enable-server \
     && make -j8 \
     && sudo make install \
     && cd -
