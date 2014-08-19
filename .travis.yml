@@ -1,0 +1,7 @@
+language: python
+script:
+ - ./installdeps.sh
+notifications:
+  email:
+    recipients:
+      - linshuai2012@gmail.com
