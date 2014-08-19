@@ -4,7 +4,7 @@ set -e
 set -x
 
 sudo apt-get update -qq
-sudo apt-get install -qq valac uuid-dev libevent-dev libarchive-dev intltool re2c libjansson-dev libqt4-dev
+sudo apt-get install -qq valac uuid-dev libevent-dev libarchive-dev intltool re2c libjansson-dev
 
 git submodule update
 
@@ -48,7 +48,7 @@ cd seafile \
     && cd -
 
 # install seahub deps
-pip install python-dateutil chardet six Image \
+sudo pip install python-dateutil chardet six Image \
     Django==1.5.8 Djblets==0.6.14 \
     --allow-all-external --allow-unverified Djblets \
     --allow-unverified PIL
