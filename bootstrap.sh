@@ -17,7 +17,7 @@ seaf-server-init -d ${SEAFILE_CONF_DIR}
 ######################
 # Stat ccnet/seafile
 ######################
-ccnet-server -c ${CCNET_CONF_DIR}
+ccnet-server --daemon -c ${CCNET_CONF_DIR}
 # wait for ccnet server
 sleep 3
 seaf-server -c ${CCNET_CONF_DIR} -d ${SEAFILE_CONF_DIR}
