@@ -1,6 +1,6 @@
 language: python
 script:
- - ./installdeps.sh
+ - ./build.sh
 notifications:
   email:
     recipients:
