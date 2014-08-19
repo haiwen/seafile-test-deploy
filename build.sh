@@ -4,7 +4,8 @@ set -e
 set -x
 
 sudo apt-get update -qq
-sudo apt-get install -qq valac uuid-dev libevent-dev libarchive-dev intltool re2c libjansson-dev
+sudo apt-get install -qq valac uuid-dev libevent-dev \
+    libarchive-dev intltool re2c libjansson-dev libonig-dev
 
 git submodule update --remote --merge
 
