@@ -7,6 +7,7 @@ sudo apt-get update -qq
 sudo apt-get install -qq valac uuid-dev libevent-dev \
     libarchive-dev intltool re2c libjansson-dev libonig-dev
 
+git submodule init
 git submodule update --remote --merge
 
 # build libevhtp
