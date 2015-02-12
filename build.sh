@@ -12,7 +12,7 @@ git submodule update --remote --merge
 
 # build libevhtp
 cd libevhtp
-cmake .
+cmake -DEVHTP_DISABLE_SSL=OFF -DEVHTP_BUILD_SHARED=ON .
 make -j8
 sudo make install
 cd -
