@@ -3,9 +3,10 @@
 set -e
 set -x
 
+sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt-get update -qq
 sudo apt-get install -qq valac uuid-dev libevent-dev \
-    libarchive-dev intltool re2c libjansson-dev libonig-dev
+    libarchive-dev intltool re2c libjansson-dev libonig-dev git
 
 git submodule init
 git submodule update --remote --merge
