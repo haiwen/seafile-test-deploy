@@ -2,5 +2,9 @@
   "master": {
     "ccnet":  "master",
     "seahub": "5.0"
+  },
+  "upgrade-seahub-thirdparts": {
+    "ccnet":  "master",
+    "seahub": "master"
   }
 }
