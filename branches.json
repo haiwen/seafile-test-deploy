@@ -1,6 +1,6 @@
 {
   "master": {
     "ccnet":  "master",
-    "seahub": "master"
+    "seahub": "v5.1.3-server"
   }
 }
