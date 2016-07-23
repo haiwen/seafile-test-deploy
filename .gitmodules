@@ -9,7 +9,7 @@
 [submodule "seafile"]
 	path = seafile
 	url = git://github.com/haiwen/seafile.git
-	branch = master
+	branch = 5.1 
 [submodule "libevhtp"]
 	path = libevhtp
 	url = git://github.com/haiwen/libevhtp.git
