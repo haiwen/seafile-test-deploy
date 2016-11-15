@@ -35,7 +35,7 @@ sudo make install
 cd -
 
 # build ccnet
-cd ccnet
+cd ccnet-server
 ./autogen.sh
 ./configure --disable-client --enable-server
 make -j8
@@ -43,7 +43,7 @@ sudo make install
 cd -
 
 # build seafile
-cd seafile
+cd seafile-server
 ./autogen.sh
 ./configure --disable-client --disable-fuse --enable-server
 make -j8
