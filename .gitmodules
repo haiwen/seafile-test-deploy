@@ -14,7 +14,3 @@
 	path = libevhtp
 	url = git://github.com/haiwen/libevhtp.git
 	branch = master
-[submodule "libzdb"]
-	path = libzdb
-	url = git://github.com/haiwen/libzdb.git
-	branch = master

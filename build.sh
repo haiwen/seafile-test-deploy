@@ -18,14 +18,6 @@ make -j8
 sudo make install
 cd -
 
-# build libzdb
-cd libzdb
-./bootstrap
-./configure --without-postgresql --without-mysql
-make -j8
-sudo make install
-cd -
-
 # build libsearpc
 cd libsearpc
 ./autogen.sh
