@@ -1,7 +1,7 @@
 [submodule "ccnet-server"]
 	path = ccnet-server
 	url = git://github.com/haiwen/ccnet-server.git
-	branch = master
+	branch = 6.2
 [submodule "libsearpc"]
 	path = libsearpc
 	url = git://github.com/haiwen/libsearpc.git
