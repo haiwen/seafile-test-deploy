@@ -7,6 +7,7 @@ set -x
 
 CCNET_CONF_DIR=/tmp/ccnet
 SEAFILE_CONF_DIR=/tmp/seafile-data
+LOG_DIR=/tmp/logs
 
 ######################
 # Initialize ccnet/seafile configuration
@@ -27,7 +28,8 @@ EOF
 ######################
 # Stat ccnet/seafile
 ######################
-ccnet-server --daemon -c ${CCNET_CONF_DIR}
+mkdir ${LOG_DIR}
+ccnet-server -c ${CCNET_CONF_DIR} -D all -f - >${LOG_DIR}/ccnet.log 2>&1 &
 # wait for ccnet server
 sleep 3
-seaf-server -c ${CCNET_CONF_DIR} -d ${SEAFILE_CONF_DIR}
+seaf-server -c ${CCNET_CONF_DIR} -d ${SEAFILE_CONF_DIR} -D all -f - >${LOG_DIR}/seafile.log 2>&1 &
