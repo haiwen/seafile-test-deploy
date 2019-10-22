@@ -12,7 +12,7 @@ LOG_DIR=/tmp/logs
 ######################
 # Initialize ccnet/seafile configuration
 ######################
-ccnet-init -c ${CCNET_CONF_DIR} --name testserver --port 10001 --host 127.0.0.1
+ccnet-init -c ${CCNET_CONF_DIR} --host 127.0.0.1
 seaf-server-init -d ${SEAFILE_CONF_DIR}
 
 cd ${CCNET_CONF_DIR} && cat >> ccnet.conf <<EOF
