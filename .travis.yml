@@ -4,4 +4,8 @@ script:
 notifications:
   email:
     recipients:
-      - linshuai2012@gmail.com
+      - lian@seafile.com
+
+branches:
+  only:
+    - 8.0
