@@ -15,6 +15,9 @@ LOG_DIR=/tmp/logs
 
 mkdir ${CCNET_CONF_DIR}
 cd ${CCNET_CONF_DIR} && cat >> ccnet.conf <<EOF
+[General]
+SERVICE_URL = http://127.0.0.1:8000
+
 [Database]
 CREATE_TABLES=true
 EOF
