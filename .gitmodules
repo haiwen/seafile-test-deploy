@@ -1,15 +1,11 @@
-[submodule "ccnet-server"]
-	path = ccnet-server
-	url = git://github.com/haiwen/ccnet-server.git
-	branch = 7.1
 [submodule "libsearpc"]
 	path = libsearpc
 	url = git://github.com/haiwen/libsearpc.git
-	branch = master
+	branch = 8.0
 [submodule "seafile-server"]
 	path = seafile-server
 	url = git://github.com/haiwen/seafile-server.git
-	branch = 7.1
+	branch = 8.0
 [submodule "libevhtp"]
 	path = libevhtp
 	url = git://github.com/haiwen/libevhtp.git

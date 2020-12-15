@@ -21,14 +21,6 @@ make -j8
 sudo make install
 cd -
 
-# build ccnet
-cd ccnet-server
-./autogen.sh
-./configure --disable-client --enable-server
-make -j8
-sudo make install
-cd -
-
 # build seafile
 cd seafile-server
 ./autogen.sh
