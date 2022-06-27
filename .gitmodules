@@ -1,11 +1,11 @@
 [submodule "libsearpc"]
 	path = libsearpc
 	url = https://github.com/haiwen/libsearpc.git
-	branch = 8.0
+	branch = master
 [submodule "seafile-server"]
 	path = seafile-server
 	url = https://github.com/haiwen/seafile-server.git
-	branch = 8.0
+	branch = master
 [submodule "libevhtp"]
 	path = libevhtp
 	url = https://github.com/haiwen/libevhtp.git
