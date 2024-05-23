@@ -23,6 +23,9 @@ cd -
 
 # build seafile
 cd seafile-server
+cd ci/
+./install-deps.sh
+cd -
 ./autogen.sh
 ./configure --disable-client --disable-fuse --enable-server
 make -j8
