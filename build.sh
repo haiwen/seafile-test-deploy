@@ -23,6 +23,10 @@ cd -
 
 # build seafile
 cd seafile-server
+
+git fetch origin 11.0:11.0 
+git checkout 11.0
+
 cd ci/
 ./install-deps.sh
 cd -
