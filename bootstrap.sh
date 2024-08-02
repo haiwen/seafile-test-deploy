@@ -15,7 +15,7 @@ LOG_DIR=/tmp/logs
 # https://mariadb.com/kb/en/mariadb-package-repository-setup-and-usage/
 curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server-10.6
-# service mysql start
+
 sudo systemctl start mysql.service
 
 SQLROOTPW=root
@@ -29,12 +29,6 @@ password=$SQLROOTPW
 EOF
 
 sudo mv /tmp/.my.cnf /root/.my.cnf
-
-# sudo cat > /root/.my.cnf <<EOF
-# [client]
-# user=root
-# password=$SQLROOTPW
-# EOF
 
 sudo chmod 600 /root/.my.cnf
 
