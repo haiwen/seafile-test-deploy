@@ -13,7 +13,9 @@ LOG_DIR=/tmp/logs
 # MariaDB
 # -------------------------------------------
 # https://mariadb.com/kb/en/mariadb-package-repository-setup-and-usage/
-# curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
+chmod +x mariadb_repo_setup
+./mariadb_repo_setup --mariadb-server-version="mariadb-10.6.19"
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server-10.6
 
 sudo systemctl start mysql.service
