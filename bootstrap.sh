@@ -12,9 +12,24 @@ LOG_DIR=/tmp/logs
 # -------------------------------------------
 # MariaDB
 # -------------------------------------------
+
 # https://mariadb.com/kb/en/mariadb-package-repository-setup-and-usage/
-curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server-10.6
+# curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.6"
+
+# curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup -o mariadb_repo_setup.sh
+# sudo bash mariadb_repo_setup.sh --mariadb-server-version="mariadb-10.6"
+# DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server-10.6
+
+wget http://archive.ubuntu.com/ubuntu/pool/universe/r/readline5/libreadline5_5.2+dfsg-3build1_amd64.deb
+sudo dpkg -i libreadline5_5.2+dfsg-3build1_amd64.deb
+sudo apt update
+
+
+sudo apt-get install software-properties-common dirmngr apt-transport-https
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.mariadb.org/repo/10.6/ubuntu focal main'
+sudo apt update
+DEBIAN_FRONTEND=noninteractive sudo apt install mariadb-server mariadb-client-core-10.6
 
 sudo systemctl start mysql.service
 
@@ -34,6 +49,7 @@ sudo chmod 600 /root/.my.cnf
 
 sudo mysqladmin -uroot -proot create seafile
 sudo mysqladmin -uroot -proot create ccnet
+sudo mysqladmin -uroot -proot create seahub
 
 ######################
 # Initialize ccnet/seafile configuration
