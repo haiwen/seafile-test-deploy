@@ -52,6 +52,9 @@ sudo mysqladmin -uroot -proot create seafile
 sudo mysqladmin -uroot -proot create ccnet
 sudo mysqladmin -uroot -proot create seahub
 
+sudo mysql -uroot -proot ccnet <seafile-server/scripts/sql/mysql/ccnet.sql
+sudo mysql -uroot -proot seafile <seafile-server/scripts/sql/mysql/seafile.sql
+
 ######################
 # Initialize ccnet/seafile configuration
 ######################
