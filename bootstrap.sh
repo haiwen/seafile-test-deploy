@@ -20,10 +20,10 @@ LOG_DIR=/tmp/logs
 # sudo bash mariadb_repo_setup.sh --mariadb-server-version="mariadb-10.6"
 # DEBIAN_FRONTEND=noninteractive sudo apt-get install -y mariadb-server-10.6
 
-wget http://ftp.us.debian.org/debian/pool/main/r/readline5/libreadline5_5.2+dfsg-3+b13_amd64.deb
-sudo dpkg -i libreadline5_5.2+dfsg-3+b13_amd64.deb
-sudo apt update
-
+#wget http://ftp.us.debian.org/debian/pool/main/r/readline5/libreadline5_5.2+dfsg-3+b13_amd64.deb
+#sudo dpkg -i libreadline5_5.2+dfsg-3+b13_amd64.deb
+sudo apt update --fix-missing
+sudo apt install -y libreadline-dev
 
 # sudo apt-get install software-properties-common dirmngr apt-transport-https
 # sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
