@@ -5,8 +5,8 @@ set -x
 
 ./build.sh
 
-CCNET_CONF_DIR=/tmp/ccnet
-SEAFILE_CONF_DIR=/tmp/seafile-data
+SEAFILE_CENTRAL_CONF_DIR=/tmp/conf
+SEAFILE_DATA_DIR=/tmp/seafile-data
 LOG_DIR=/tmp/logs
 
 # -------------------------------------------
@@ -59,8 +59,10 @@ sudo mysql -uroot -proot seafile <seafile-server/scripts/sql/mysql/seafile.sql
 # Initialize ccnet/seafile configuration
 ######################
 
-mkdir ${CCNET_CONF_DIR}
-cd ${CCNET_CONF_DIR} && cat >> ccnet.conf <<EOF
+mkdir ${SEAFILE_CENTRAL_CONF_DIR}
+cd ${SEAFILE_CENTRAL_CONF_DIR}
+
+cat >> ccnet.conf <<EOF
 [General]
 SERVICE_URL = http://127.0.0.1:8000
 
@@ -75,8 +77,7 @@ CONNECTION_CHARSET = utf8mb4
 CREATE_TABLES=true
 EOF
 
-mkdir ${SEAFILE_CONF_DIR}
-cd ${SEAFILE_CONF_DIR} && cat >> seafile.conf <<EOF
+cat >> seafile.conf <<EOF
 [database]
 type = mysql
 host = 127.0.0.1
@@ -93,4 +94,5 @@ EOF
 # Stat ccnet/seafile
 ######################
 mkdir ${LOG_DIR}
-seaf-server -c ${CCNET_CONF_DIR} -d ${SEAFILE_CONF_DIR} -D all -f - >${LOG_DIR}/seafile.log 2>&1 &
+mkdir ${SEAFILE_DATA_DIR}
+seaf-server -F ${SEAFILE_CENTRAL_CONF_DIR} -d ${SEAFILE_DATA_DIR} -D all -f - >${LOG_DIR}/seafile.log 2>&1 &
