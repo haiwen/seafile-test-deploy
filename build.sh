@@ -27,8 +27,7 @@ cd ci/
 ./install-deps.sh
 cd -
 ./autogen.sh
-CC="gcc -Wno-error=incompatible-pointer-types"
-./configure --disable-client --disable-fuse --enable-server
+CC="gcc -Wno-error=incompatible-pointer-types" ./configure --disable-client --disable-fuse --enable-server
 make -j8
 sudo make install
 cd -
